@@ -1,0 +1,123 @@
+/* Header */
+.header {
+  transition-property: all;
+  transition-duration: 1000s;
+  transition-timing-function: ease;
+}
+
+.header .header__logo {
+  text-transform: uppercase;
+}
+
+.header nav {
+  position: relative;
+  background-color: var(--dark);
+  color: var(--white);
+  padding-top: 1.0625rem;
+  padding-bottom: 1.0625rem;
+  font-weight: 700;
+}
+
+.header .header__links {
+  text-transform: uppercase;
+  margin: 0;
+  padding: 0;
+}
+
+.header .header__links li {
+  display: inline-block;
+  padding-right: 2.25rem;
+}
+
+.header.open .header__toggle > span:first-child {
+  transform: rotate(45deg);
+}
+
+.header.open .header__toggle > span:nth-child(2) {
+  opacity: 0;
+}
+
+.header.open .header__toggle > span:last-child {
+  transform: rotate(-45deg);
+}
+
+/* Mobile */
+.header__toggle > span {
+  display: block;
+  width: 26px;
+  height: 2px;
+  background-color: var(--white);
+  transition: all 300ms ease-in-out;
+  transform-origin: 3px 1px;
+}
+
+.header__toggle > span:not(:last-child) {
+  margin-bottom: 5px;
+}
+
+.header-sticky {
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 10
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the header gets a new position at the top of the page (position:fixed and top:0) */
+.header-sticky + .carousel-content {
+  padding-top: 110px;
+}
+
+.header__menu {
+  z-index: 100;
+  text-transform: uppercase;
+  background: var(--dark);
+  color: var(--white);
+  padding: 1.625rem;
+  position: absolute;
+  width: 100%;
+}
+
+.header__menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.header__menu ul li a {
+  color: var(--white);
+  padding: .625rem;
+  display: block;
+  text-align: center;
+  border-bottom: 1px solid var(--white);
+}
+
+.header__menu ul li a {
+  color: var(--white);
+  padding: .625rem;
+  display: block;
+  text-align: center;
+  border-bottom: 1px solid var(--white);
+}
+
+.header__menu ul li:last-child a {
+  border-bottom: none;
+}
+
+.header__links {
+  padding: 1.0625rem 1.5rem;
+}
+
+.header__links a {
+  position: relative;
+  font-size: var(--font-sm);
+  color: var(--grayish-blue);
+}
+
+.header__links a:hover {
+  color: var(--light-blue);
+  transition: color 300ms ease-in-out;
+}
+
+.header__links a:not(:last-child) {
+  margin-right: 32px;
+}
